@@ -1,0 +1,13 @@
+.container {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  display: grid;
+  cursor: pointer;
+  place-items: center;
+}
+.h1 {
+  font-size: 40px;
+  font-weight: bold;
+}
