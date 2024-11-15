@@ -15,7 +15,6 @@ async function getBookList(id: string) {
 
 export default async function Book({ params: { id } }: IParams) {
   const book = await getBookList(id);
-  console.log(book);
   return (
     <div className={styled.container}>
       {book.books.map((list) => (

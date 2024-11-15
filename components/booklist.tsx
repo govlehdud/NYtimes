@@ -1,13 +1,13 @@
 import styled from "../styles/book-list.module.css";
 
-interface IList {
-  img: string;
-  author: string;
-  url: string;
-  title: string;
+export interface IList {
+  img?: string;
+  author?: string;
+  url?: string;
+  title?: string;
 }
 
-export default async function List({ img, author, url, title }: IList) {
+export default function List({ img, author, url, title }: IList) {
   return (
     <div className={styled.container}>
       <div className={styled.credit_container}>
