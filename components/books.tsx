@@ -15,10 +15,12 @@ export default function Book({ id, title }: IBOOK) {
   };
   return (
     <div className={styles.Button} onClick={onClick}>
-      {/* <Link href={`/book/${id}`}>{title} &rarr;</Link> */}
-      <a href={`/book/${id}`} className={styles.aTag}>
+      <Link prefetch href={`/book/${id}`} className={styles.aTag}>
         {title} &rarr;
-      </a>
+      </Link>
+      {/* <a href={`/book/${id}`} className={styles.aTag}>
+        {title} &rarr;
+      </a> */}
     </div>
   ); // 반환값 추가
 }

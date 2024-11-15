@@ -17,12 +17,13 @@ export default async function Book({ params: { id } }: IParams) {
   const book = await getBookList(id);
   return (
     <div className={styled.container}>
-      {book.books.map((list) => (
+      {book.books.map((list, key) => (
         <BookList
           img={list.book_image}
           author={list.author}
           url={list.amazon_product_url}
           title={list.title}
+          key={key}
         />
       ))}
     </div>
