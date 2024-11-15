@@ -1,11 +1,10 @@
 .container {
-  display: flex;
-  gap: 20px;
-  width: 80%;
-  margin: 50px auto;
+  width: 240px;
+  height: 100%;
   align-items: center;
   overflow-x: auto;
   white-space: nowrap;
+  background-color: rgba(255, 255, 255, 0.342);
 }
 .container::-webkit-scrollbar {
   display: none;
@@ -18,11 +17,11 @@
   filter: opacity(0.5);
 }
 
-.credit_container .credit_name {
+.credit_container .buy {
   position: absolute;
   transform: translate(-40%, -50%);
-  left: 85px;
-  top: 150px;
+  left: 100px;
+  top: 190px;
   width: 200px;
   text-align: center;
   opacity: 0;
@@ -32,21 +31,44 @@
   font-family: "Courier New", Courier, monospace;
   font-size: 30px;
 }
-.credit_name:hover {
+.buy:hover {
   opacity: 1;
 }
 .aTag {
   font-size: 30px;
 }
-.credit_container:hover .credit_name {
+.credit_container:hover .buy {
   opacity: 1;
 }
 .credit_img {
-  height: 380px;
-  width: 220px;
-  border-radius: 10px;
-  margin: 0 5px;
+  height: 400px;
+  width: 241px;
   font-size: 0.5rem;
-  background-size: cover;
   background-color: rgba(225, 225, 225, 0.2);
+}
+
+.title {
+  font-size: 17px;
+  position: relative;
+  color: whitesmoke;
+  overflow: hidden; /* 내용이 넘칠 경우 숨김 */
+  text-overflow: ellipsis; /* 넘치는 부분에 ... 표시 */
+  max-height: 50px; /* 최대 높이 설정 */
+  line-height: 25px; /* 줄 높이 설정 */
+  margin: 5px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.title span:nth-child(2) {
+  color: rgb(238, 174, 235);
+}
+.spanSpace {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.title:hover {
+  white-space: normal; /* 마우스 오버 시 줄 바꿈 허용 */
+  max-height: none; /* 최대 높이 제한 해제 */
 }

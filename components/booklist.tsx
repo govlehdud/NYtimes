@@ -12,15 +12,14 @@ export default async function List({ img, author, url, title }: IList) {
     <div className={styled.container}>
       <div className={styled.credit_container}>
         <img src={img} className={styled.credit_img} />
-        <div className={styled.credit_name}>
-          <span>{title}</span>
-          <br />
-          <span>{author}</span>
-          <br />
-          <br />
+        <div className={styled.buy}>
           <a href={`${url}`} target={"_blank"} className={styled.aTag}>
             Buy Now!!
           </a>
+        </div>
+        <div className={styled.title}>
+          <span className={styled.spanSpace}>{title}</span>
+          <span className={styled.spanSpace}>{author}</span>
         </div>
       </div>
     </div>

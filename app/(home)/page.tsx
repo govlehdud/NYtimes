@@ -13,7 +13,11 @@ export default async function Page() {
   return (
     <div>
       {Book.results.map((book) => (
-        <Books id={book.list_name_encoded} title={book.display_name} />
+        <Books
+          id={book.list_name_encoded}
+          title={book.display_name}
+          key={book.list_name_encoded}
+        />
       ))}
     </div>
   );
