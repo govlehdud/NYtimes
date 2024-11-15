@@ -3,7 +3,7 @@ import { Metadata } from "next";
 import "../styles/global.css";
 export const metadata: Metadata = {
   title: {
-    template: "%s | Next Movies",
+    template: "%s | NY_times",
     default: "Loading...",
   },
 };

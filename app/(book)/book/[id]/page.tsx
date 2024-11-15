@@ -2,6 +2,13 @@ import { BOOK_LIST_API } from "../../../constant";
 import BookList from "../../../../components/booklist";
 import styled from "../../../../styles/main.module.css";
 
+export async function generateMetadata({ params: { id } }: IParams) {
+  const movie = await getBookList(id);
+  return {
+    title: movie.display_name,
+  };
+}
+
 interface IParams {
   params?: { id: string };
 }

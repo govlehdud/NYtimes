@@ -1,6 +1,10 @@
 import { BOOK_API } from "../constant";
 import Books from "../../components/books";
 
+export const metadata = {
+  title: "Home",
+};
+
 async function getBookInfo() {
   const res = await fetch(BOOK_API);
   const json = await res.json();
